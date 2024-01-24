@@ -10,7 +10,7 @@ resultado = mi_lista[0:2]
 mi_lista3 = mi_lista + mi_lista2  # combinar 2 arrays
 
 print(resultado)
-print(type(resultado)) # type : <class 'list'>
+print(type(resultado))  # type : <class 'list'>
 
 mi_lista3.append('g')
 print(mi_lista3)
@@ -33,3 +33,4 @@ lista2 = ['a', 'b', 'c', 'd']
 print(lista2)
 lista2.reverse()  # reverse() es un metodo MUTABLE, por lo que cambiará el array original
 print(lista2)
+print('a' in lista2)

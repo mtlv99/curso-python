@@ -28,3 +28,4 @@ dic2['c3'] = 'Soy nuevo'  # para agregar elementos nuevos, similar a JS
 print(dic2.keys())
 print(dic2.values())
 print(dic.items())  # tuples
+print('c1' in dic2)
