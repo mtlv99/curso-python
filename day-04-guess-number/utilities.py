@@ -1,3 +1,10 @@
+# importaciones (los archivos .py no deben tener el mismo
+# nombre que las librerias, o causara dependencias circulares (se estaría importando el mismo módulo
+# que se está escribiendo (case sensitive). Si se utiliza Random.py, no causaría problema por ejemplo.
+
+from random import *  # para importar toda la librería
+# from random import randint  # para importar un solo método
+
 # Range:
 # range crea un objeto con valores empezando desde 0 hasta el valor definido
 # for numero in range(5):
@@ -67,3 +74,61 @@ print(min(dic_min))
 
 # para conseguir el valor mas bajo se usaria .values()
 print(min(dic_min.values()))
+
+print("Random:\n")
+
+# Random
+colores = ['azul', 'rojo', 'verde', 'amarillo']
+numeros_rand = list(range(5, 50, 5))
+
+aleatorio = randint(1,50)  # genera un int entre el rango seleccionado
+aleatorio_uniform = uniform(1,5)  # genera un float entre el rango seleccionado
+aleatorio_rand = random()  # genera un float entre 0 y 1, similar a como funcionan los otros lenguajes de programación.
+aleatorio_choice = choice(colores)  # selecciona un elemento random de una lista
+
+# random values
+print(aleatorio)
+print(aleatorio_uniform)
+print(aleatorio_rand)
+print(aleatorio_choice)
+
+# shuffle method
+shuffle(numeros_rand)  # randomiza una lista de valores
+print(numeros_rand)
+
+# Comprensión de listas
+
+palabra = 'python'
+
+# Esto se puede simplificar:
+# lista = []
+#
+# for letra in palabra:
+#     lista.append(letra)
+
+# Es lo mismo de arriba. La variable tiene que tener el mismo nombre
+lista = [letra for letra in palabra]
+print(lista)
+
+# nums
+lista_num = [n for n in range(0, 21, 2)]
+print(lista_num)
+
+# también se puede manipular el resultado de n
+lista_num2 = [n / 2 for n in range(0, 21, 2)]
+print(lista_num2)
+
+# también con condiciones
+lista_if = [n for n in range(0, 21, 2) if n * 2 > 10]
+print(lista_if)
+
+# también con condicion alternativa
+# (hay que cambiar un por el orden para meter el else)
+lista_if2 = [n if n * 2 > 10 else 'no' for n in range(0, 21, 2)]
+print(lista_if2)
+
+# Ejemplo
+pies = [10, 20, 30, 40, 50]
+metros = [p/3.281 for p in pies]
+
+print(metros)
